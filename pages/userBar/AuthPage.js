@@ -19,9 +19,10 @@ class AuthPage extends Page {
         // browser.switchTo(curTabId);
     }
 
-    get btnRegistration() {
-        return browser.element('div.auth-box__switcher-item + div');
-    }
+    // get btnRegistration() {
+    //     return browser.element('div.auth-box__switcher-item + div');
+    // }
+
     get textBtnRegistration() {
         return this.btnRegistration.getText();
     }
