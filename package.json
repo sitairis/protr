@@ -1,0 +1,15 @@
+{
+  "name": "protr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "spec.js",
+  "scripts": {
+    "wd": "webdriver-manager start",
+    "test": "protractor conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine": "^2.8.0"
+  }
+}
