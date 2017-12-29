@@ -1,5 +1,4 @@
 
-
 describe('Protractor Demo App', function() {
     let firstNumber = element(by.model('first'));
     let secondNumber = element(by.model('second'));
