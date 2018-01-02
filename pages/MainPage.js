@@ -11,7 +11,7 @@ class MainPage extends Page {
     }
 
     mainNavigation(name) {
-        this.navigateMenu.element(by.cssContainingText(`span`, name)).click();
+        this.navigateMenu.$(by.cssContainingText(`span`, name)).click();
     }
 
     open() {
@@ -33,7 +33,7 @@ class MainPage extends Page {
     prepareFirstSearch(value) {
         this.typeTxbSearch(value);
 
-        browser.switchTo().frame(element(by.css('iframe.modal-iframe')).getWebElement());
+        browser.switchTo().frame($(by.css('iframe.modal-iframe')).getWebElement());
 
     }
 

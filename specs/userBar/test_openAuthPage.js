@@ -6,12 +6,12 @@ describe("Test opening auth page", function() {
     it('should get text button', function () {
         let mainPage = new MainPage();
         mainPage.open();
-        mainPage.clickBtnAauth();
+        mainPage.clickBtnAuthorization();
 
         let authPage = new AuthPage();
         authPage.openAuthPage();
-        let result = authPage.textBtnRegistration;
+        let result = authPage.btnRegistration.getText();
 
-        expect(result).to.equal('Регистрация');
+        expect(result).toEqual('Регистрация');
     });
 });

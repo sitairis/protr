@@ -4,7 +4,7 @@ class MobilePage extends Page {
 
     constructor() {
         super("Mobile Page");
-        this.txbPriceTo = element(by.css(`input[@placeholder = 'до']`));
+        this.txbPriceTo = $(by.css(`input[@placeholder = 'до']`));
     }
 
     get title() {

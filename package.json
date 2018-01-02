@@ -5,7 +5,7 @@
   "main": "spec.js",
   "scripts": {
     "wd": "webdriver-manager start",
-    "test": "protractor conf.js --suite suite2"
+    "test": "protractor conf.js --suite suite1,suite2, suite3, suite4"
   },
   "author": "",
   "license": "ISC",

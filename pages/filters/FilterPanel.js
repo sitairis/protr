@@ -1,26 +1,22 @@
+let Filter = require('./Filter');
 
-class FilterPanel {
+class FilterPanel extends Filter{
 
     constructor() {
-        this._root = element(by.css(`#schema-filter`));
-    }
-
-    get root() {
-        return this._root;
+        super(`#schema-filter`);
+        this.filtersByType = $(by.css(`div#schema-filter div div.schema-filter__fieldset`));
     }
 
     setCheckboxFilter(type, ...values) {
 
-        let filtersByType = element(by.css(`div#schema-filter div div.schema-filter__fieldset`));
-
-        for (let filter of filtersByType) {
+        for (let filter of this.filtersByType) {
 
             if (filter.$(by.tagName(`span`)).getText() === type) {
                 // console.log(`${filter.getText()}`);
                 let rootFilter = filter.$(by.tagName(`ul`));
 
                 values.forEach((value) => {
-                    rootFilter.element(by.cssContainingText(`span`, value)).click();
+                    rootFilter.$(by.cssContainingText(`span`, value)).click();
                 });
             }
         }

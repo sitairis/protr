@@ -4,9 +4,9 @@ exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
 
     // specs: ['spec.js'],
-onPrepare: function () {
-    browser.waitForAngularEnabled(false);
-},
+    onPrepare: function () {
+        browser.waitForAngularEnabled(false);
+    },
     suites: {
         suite1: [
             './specs/catalogMobile/*.js'
@@ -19,12 +19,15 @@ onPrepare: function () {
         ],
         suite4: [
             './specs/userBar/*.js'
+        ],
+        testAll:[
+            './specs/*/*.js'
         ]
     },
     capabilities: {
         browserName: 'firefox',
         'moz:firefoxOptions': {
-            args: [ "--headless" ]
+            args: ["--headless"]
         }
     },
     // multiCapabilities: [{

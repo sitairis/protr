@@ -1,4 +1,4 @@
-let expect = require('chai').expect;
+
 let MainPage = require('../../pages/MainPage');
 let SearchForm = require('../../pages/search/SearchForm');
 
@@ -14,6 +14,6 @@ describe("Test search line", function() {
 
         let result = searchForm.isPausedItemName();
 
-        expect(result).to.equal(true);
+        expect(result).toEqual(true);
     });
 });
